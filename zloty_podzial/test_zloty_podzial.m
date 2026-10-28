@@ -1,12 +1,11 @@
 function wyniki = test_zloty_podzial(maxIter, tol)
 %   test_zloty_podzial()              – 50 iteracji na test
 %   test_zloty_podzial(maxIter, tol)  – własna liczba iteracji i dokładność
-%   wyniki = test_zloty_podzial(...)  – dodatkowo zwraca tablicę wyników
 %
 %   Wydruk:
 %     iter    – liczba wykonanych iteracji
-%     x_num   – minimum uzyskane numerycznie,  f(x_num) – wartość funkcji
-%     x_doc   – minimum docelowe (testowe),    f(x_doc)
+%     x_num   – minimum uzyskane numerycznie
+%     x_doc   – minimum docelowe (testowe)
 %     |dx|    – błąd położenia minimum
 %     |df|    – błąd wartości minimum
 %     eps     – połowa długości końcowego przedziału
@@ -15,8 +14,8 @@ if nargin < 1 || isempty(maxIter), maxIter = 50; end
 if nargin < 2 || isempty(tol),     tol = 0;      end
 
 
-T(1).nazwa      = 'UNIMODALNA   f(x) = e^x - 2x';
-T(1).f          = @f_unimodalna;
+T(1).nazwa = 'UNIMODALNA';
+T(1).f = @f_unimodalna;
 T(1).stacjonarne = log(2);
 T(1).przedzialy = [ -2    3        % minimum wewnątrz, przedział niesymetryczny
                      0    1        % wąski przedział
@@ -24,8 +23,8 @@ T(1).przedzialy = [ -2    3        % minimum wewnątrz, przedział niesymetryczn
                      1    4        % minimum poza przedziałem -> lewy koniec x = 1
                     -3    0 ];     % minimum poza przedziałem -> prawy koniec x = 0
 
-T(2).nazwa      = 'MULTIMODALNA f(x) = x^4 - 4x^2 + x';
-T(2).f          = @f_multimodalna;
+T(2).nazwa = 'MULTIMODALNA';
+T(2).f = @f_multimodalna;
 r = roots([4 0 -8 1]);
 T(2).stacjonarne = sort(real(r(abs(imag(r)) < 1e-12)))';
 T(2).przedzialy = [ -2.5  2.5      % oba minima w przedziale
