@@ -1,0 +1,19 @@
+Przypadek,Cel_testu,Funkcja,Metoda,x_opt,x_ref,Blad_x,Blad_f,Iteracje,Status
+P1,zawodzi: Złoty podział,x^4 - 4x^2 + x,Złoty podział,1.34699729907449,-1.4729947441326,2.81999204320709,2.82563608577212,27,PORAŻKA
+P1,zawodzi: Złoty podział,x^4 - 4x^2 + x,Gradient,-1.47300201600516,-1.4729947441326,7.27187256299722e-06,1.02168939974945e-10,41,SUKCES
+P1,zawodzi: Złoty podział,x^4 - 4x^2 + x,Powell,-1.47299339253939,-1.4729947441326,1.3515932049124e-06,8.61231086446423e-11,7,SUKCES
+P2,zawodzi: Złoty podział i Powell,(x - 1)^2 - 5 exp(-50(x + 1)^2),Złoty podział,1.0000005374905,-0.99200926050821,1.99200979799871,1.01596158121863,27,PORAŻKA
+P2,zawodzi: Złoty podział i Powell,(x - 1)^2 - 5 exp(-50(x + 1)^2),Gradient,-0.992009301060766,-0.99200926050821,4.05525560909226e-08,5.65347768599622e-11,17,SUKCES
+P2,zawodzi: Złoty podział i Powell,(x - 1)^2 - 5 exp(-50(x + 1)^2),Powell,0.999999999990045,-0.99200926050821,1.99200926049825,1.01596158121834,3,PORAŻKA
+P3,zawodzi: Gradient (f'(x_0) = 0),(x + 1)^3 (x - 2),Złoty podział,1.25000040311788,1.25,4.03117875080738e-07,1.64668279012403e-12,28,SUKCES
+P3,zawodzi: Gradient (f'(x_0) = 0),(x + 1)^3 (x - 2),Gradient,-1,1.25,2.25,8.54296875,0,PORAŻKA
+P3,zawodzi: Gradient (f'(x_0) = 0),(x + 1)^3 (x - 2),Powell,1.24998042425592,1.25,1.95757440797362e-05,3.87995591211165e-09,18,SUKCES
+P4,zawodzi: Gradient (zanik pochodnej),-exp(-(x - 1)^2),Złoty podział,1.0000004106062,1,4.10606204814812e-07,1.68642877440561e-13,28,SUKCES
+P4,zawodzi: Gradient (zanik pochodnej),-exp(-(x - 1)^2),Gradient,-2.49999665041783,1,3.49999665041783,0.99999521477041,1,PORAŻKA
+P4,zawodzi: Gradient (zanik pochodnej),-exp(-(x - 1)^2),Powell,0.999995223683562,1,4.77631643802656e-06,2.28131957769051e-11,8,SUKCES
+P5,zawodzi: Gradient bez Armijo,|x - 1|,Złoty podział,0.999998925019,1,1.07498099954917e-06,1.07498099954917e-06,28,SUKCES
+P5,zawodzi: Gradient bez Armijo,|x - 1|,Gradient,1.04999999994752,1,0.049999999947524,0.049999999947524,200,PORAŻKA
+P5,zawodzi: Gradient bez Armijo,|x - 1|,Powell,1,1,0,0,2,SUKCES
+P6,zawodzi: Powell (fałszywy stop),e^{5x} - 5x,Złoty podział,-1.61247149941259e-06,0,1.61247149941259e-06,3.25006688228768e-11,28,SUKCES
+P6,zawodzi: Powell (fałszywy stop),e^{5x} - 5x,Gradient,1.37966632474118e-06,0,1.37966632474118e-06,2.37936337299516e-11,11,SUKCES
+P6,zawodzi: Powell (fałszywy stop),e^{5x} - 5x,Powell,-1,0,1,4.00673794699909,15,PORAŻKA
