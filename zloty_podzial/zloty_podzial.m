@@ -9,9 +9,7 @@ function [xmin, fmin, iter, epsilon] = zloty_podzial(f, a, b, maxIter, tol)
 %     xmin    – przybliżenie punktu minimum
 %     fmin    – wartość funkcji w xmin
 %     iter    – liczba wykonanych iteracji
-%     epsilon – połowa długości końcowego przedziału, (b_k - a_k)/2.
-%               Dla funkcji unimodalnej minimum leży w [a_k, b_k], więc
-%               |xmin - x*| <= epsilon.
+%     epsilon – połowa długości końcowego przedziału
 
 if nargin < 5 || isempty(tol)
     tol = 0;

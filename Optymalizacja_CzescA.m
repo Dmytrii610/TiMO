@@ -11,6 +11,7 @@
 % • *f4 – nieróżniczkowalna:* $f_4(x) = |x-1| + 0.3x^2$, $x\in[-2,\,3]$ – minimum $x = 1$ w punkcie załamania, w którym pochodna nie istnieje.
 % Zielone pole to zbiór dopuszczalny $[a,b]$, gwiazdka – minimum referencyjne (globalne na $[a,b]$, wyznaczone na gęstej siatce i doprecyzowane), kwadrat – domyślny punkt startowy $x_0$ dla gradientu i metody Powella.
 F = funkcje_testowe();
+theme(figure,"light")
 figure('Name', 'Funkcje celu', 'Color', 'w', 'Position', [100 100 1100 750]);
 t = tiledlayout(2, 2, 'TileSpacing', 'compact', 'Padding', 'compact');
 for i = 1:numel(F)
